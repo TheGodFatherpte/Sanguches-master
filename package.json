@@ -26,5 +26,12 @@
     "bugs": {
         "url": "https://github.com/TheGodFatherpte/sanguches-master/issues"
     },
-    "homepage": "https://github.com/TheGodFatherpte/sanguches-master#readme"
+    "homepage": "https://github.com/TheGodFatherpte/sanguches-master#readme",
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    },
+    "scripts": {
+        "install:app": "concurrently \"cd backend && composer install\" " ,
+        "start": "concurrently \"cd backend && php artisan serve\" " 
+    }
 }
