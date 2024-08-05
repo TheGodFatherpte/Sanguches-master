@@ -3,12 +3,17 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
+        "build": "vite build",
+        "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "backend": "cd backend && php artisan serve",
+        "frontend": "vite",
         "build": "vite build"
     },
     "devDependencies": {
         "axios": "^1.6.4",
+        "concurrently": "^8.2.2",
         "laravel-vite-plugin": "^1.0",
-        "vite": "^5.0"
+        "vite": "^5.3.5"
     },
     "name": "sanguches",
     "version": "1.0.0",
@@ -26,12 +31,5 @@
     "bugs": {
         "url": "https://github.com/TheGodFatherpte/sanguches-master/issues"
     },
-    "homepage": "https://github.com/TheGodFatherpte/sanguches-master#readme",
-    "dependencies": {
-        "concurrently": "^8.2.2"
-    },
-    "scripts": {
-        "install:app": "concurrently \"cd backend && composer install\" " ,
-        "start": "concurrently \"cd backend && php artisan serve\" " 
-    }
+    "homepage": "https://github.com/TheGodFatherpte/sanguches-master#readme"
 }
